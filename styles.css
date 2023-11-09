@@ -1,35 +1,142 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-image: url('fondo.jpg');
+    background-size: cover; /* Ajusta el tamaño para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#caja, #inventario {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 400px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#caja button, .venderTodoBtn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#animacionCaja {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+#inventario {
+    max-width: 600px;
+}
+
+#listaSkins li {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#listaSkins img {
+    max-width: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#cajaContenedor.shake {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+#cajaContenedor img.closed {
+    transition: opacity 0.5s;
+}
+
+.venderTodoBtn {
+    background-color: rgb(255, 67, 67);
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+#hud {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#monedas {
+    color: #ffd700;
+}
+
+.hero {
+    background-image: url('fondo.jpg'); /* Reemplaza con la ruta correcta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-.under-construction {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-img {
-    width: 240px;
-    height: 139px;
-}
-
-h1 {
-    color: #333;
-    font-size: 24px;
-    margin-top: 20px;
-}
-
-p {
-    color: #666;
-    font-size: 18px;
-    margin-top: 10px;
 }
