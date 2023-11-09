@@ -1,8 +1,10 @@
 let monedas = 100; // Número inicial de monedas
 let inventario = []; // Array para almacenar las skins obtenidas
+let cajaAbierta = false; // Variable para rastrear el estado de la caja
 
 function abrirCaja() {
-    if (monedas >= 10) {
+    if (!cajaAbierta && monedas >= 10) {
+        cajaAbierta = true; // Marcar la caja como abierta
         monedas -= 10;
         actualizarHUD();
 
@@ -26,7 +28,10 @@ function abrirCaja() {
             document.getElementById("animacionCaja").innerHTML = ""; // Limpiar la animación
             cajaContenedor.classList.remove("shake", "open"); // Detener la agitación y volver a cerrar la caja
             cajaContenedor.classList.add("closed");
+            cajaAbierta = false; // Marcar la caja como cerrada después de mostrar la skin
         }, 2000); // Simulando una animación de 2 segundos
+    } else if (cajaAbierta) {
+        alert("Ya abriste una caja. Espera a ver la skin antes de abrir otra.");
     } else {
         alert("No tienes suficientes monedas para abrir una caja.");
     }
