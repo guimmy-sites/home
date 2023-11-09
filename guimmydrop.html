@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuimmyDrop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+<header id="hud">
+    <div id="logo">
+        <img src="logo.jpg" alt="Logo GuimmyDrop">
+        <h1>GuimmyDrop</h1>
+    </div>
+    <nav>
+        <a href="#">Inicio</a></li>
+        <a href="#">Skins</a></li>
+        <a href="#">Contacto</a></li>
+    </nav>
+    <div>
+        <p>Monedas: <span id="monedas">100</span></p>
+    </div>
+</header>
+
+
+
+<div id="caja">
+    <div id="cajaContenedor" class="closed">
+        <img src="caja.jpg" alt="Caja" id="cajaImagen">
+    </div>
+    <button onclick="abrirCaja()">Abrir Caja</button>
+    <div id="animacionCaja"></div>
+</div>
+
+<div id="inventario">
+    <h2>Inventario
+        <button onclick="venderTodo()" class="venderTodoBtn">Vender Todo</button>
+    </h2>
+    <ul id="listaSkins">
+        <!-- Aquí se mostrarán las skins obtenidas -->
+    </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
