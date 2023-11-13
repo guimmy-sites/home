@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,11 +72,11 @@
             background-color: #2980b9;
         }
     </style>
-    <title>Tic Tac Toe</title>
+    <title>Guimmy Games</title>
 </head>
 <body>
     <div class="container">
-        <h1>Tic Tac Toe</h1>
+        <h1>Tres en línea</h1>
         <div id="board" class="board">
             <div class="cell" onclick="handleCellClick(0)"></div>
             <div class="cell" onclick="handleCellClick(1)"></div>
@@ -89,7 +89,10 @@
             <div class="cell" onclick="handleCellClick(8)"></div>
         </div>
         <div id="result" class="result"></div>
-        <button onclick="resetGame()">Reset</button>
+        <button onclick="resetGame()">Reiniciar</button>
+        <a href="GuimmyGames.apk" download="GuimmyGames.apk">
+            <button>Descargar Juego Móvil</button>
+        </a>
     </div>
     
     <script>
@@ -120,14 +123,14 @@
             for (const combination of winningCombinations) {
                 const [a, b, c] = combination;
                 if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-                    displayResult(`${currentPlayer} wins!`);
+                    displayResult(`${currentPlayer} gana!`);
                     gameActive = false;
                     return;
                 }
             }
 
             if (!board.includes('')) {
-                displayResult('It\'s a tie!');
+                displayResult('¡Es un empate!');
                 gameActive = false;
                 return;
             }
